@@ -34,12 +34,12 @@ local vm = FindMetaTable"Vector";
 local aiming;  	   
   	   
 local chatspam = {  	   
-	"VENOM.CLUB BEST CHEATS",  	   
-	"GET REKT BY VENOM0US",  	   
+	"Wave.cc BEST CHEATS",  	   
+	"GET REKT BY WAVES",  	   
 	"da very b3st",  	   
 	"BEST PASTES",  	   
 	"big c0des",  	   
-	"LOOKS LIKE VENOM.CLUB WINS",  	   
+	"LOOKS LIKE U NO WINS",  	   
 	"ALLAHU AKBAR PSILENT",  	   
 	"r0ad to 0wn1ng n00bs",  	   
 }  	   
@@ -62,7 +62,7 @@ local chatspam3 = {
 local omsg;  	   
   	   
 local menvars = {  	   
-	["Cheat Name"] = "ven0msquad",  	   
+	["Cheat Name"] = "Wave.cc",  	   
 }  	   
   	   
 if (file.Exists("rmenu/"..menvars["Cheat Name"].."/mvars.txt", "DATA")) then  	   
@@ -88,7 +88,7 @@ local vars = {
 		{"Thirdperson", 1, 1},  	   
 		{"Thirdperson D.", 13},  	   
 		{"Chatspam", 0, 3, "1 = Normal | 2 = Annoying/Racist | 3 = Numbers"},  	   
-		{"Quakesounds", 0, 1},  	   
+		{"Kill Sound", 0, 1},  	   
 		{"Bunnyhop", 1, 1},  	   
 	},  	   
 	["Aimbot"] = {  	   
@@ -855,16 +855,7 @@ end
 local quake=0;  	   
   	   
 local ks = {  	   
-	nil,  	   
-	"quake/doublekill.wav",  	   
-	"quake/triplekill.wav",  	   
-	"quake/dominating.wav",  	   
-	"quake/killingspree.wav",  	   
-	"quake/rampage.wav",  	   
-	"quake/megakill.wav",  	   
-	"quake/monsterkill.wav",  	   
-	"quake/ultrakill.wav",  	   
-	"quake/unstoppable.wav",  	   
+	nil,  	    	   
 	"quake/godlike.wav",  	   
 }  	   
   	   
@@ -912,10 +903,10 @@ function GAMEMODE:RenderScreenspaceEffects()
 		local col = gBool("Visuals", "Autism") && Color(math.random(255), math.random(255), math.random(255)) || team.GetColor(pm.Team(v));  	   
 		cam.Start3D();  	   
 			render.MaterialOverride(mat);  	   
-			render.SetColorModulation(col.b / 255, col.r / 255, col.g / 255);  	   
+			render.SetColorModulation(255, 0, 0);  	   
 			em.DrawModel(v);  	   
 			render.MaterialOverride(mat2);  	   
-			render.SetColorModulation(col.r / 255, col.g / 255, col.b / 255);  	   
+			render.SetColorModulation(0, 0, 255);  	   
 			em.DrawModel(v);  	   
 			render.SetColorModulation(1, 1, 1);  	   
 		cam.End3D();  	   
